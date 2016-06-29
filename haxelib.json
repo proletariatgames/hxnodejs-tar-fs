@@ -1,0 +1,14 @@
+{
+  "name": "hxnodejs-tar-fs",
+  "url": "https://github.com/proletariatgames/hxnodejs-tar-fs",
+  "license": "MIT",
+  "classPath": "src",
+  "tags": ["nodejs", "tar-fs", "tar"],
+  "description": "Externs for the tar-fs NPM module",
+  "releasenote": "Initial release",
+  "version": "1.13.0-alpha",
+  "contributors": ["Proletariat", "lpetre", "danogles", "waneck"],
+  "dependencies": {
+    "hxnodejs": ""
+  }
+}
