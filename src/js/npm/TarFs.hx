@@ -2,11 +2,11 @@ package js.npm;
 
 @:jsRequire('tar-fs')
 extern class TarFs {
-  @:overload(function(directory:String):js.node.stream.Writable.IWritable {})
-  static function pack(directory:String, options:TarFsPackOptions):js.node.stream.Writable.IWritable;
+  @:overload(function(directory:String):js.node.stream.Readable.IReadable {})
+  static function pack(directory:String, options:TarFsPackOptions):js.node.stream.Readable.IReadable;
 
-  @:overload(function(toDirectory:String):js.node.stream.Readable.IReadable {})
-  static function extract(toDirectory:String, options:TarFsExtractOptions):js.node.stream.Readable.IReadable;
+  @:overload(function(toDirectory:String):js.node.stream.Writable.IWritable {})
+  static function extract(toDirectory:String, options:TarFsExtractOptions):js.node.stream.Writable.IWritable;
 }
 
 typedef TarFsOptions<Stream> = {
@@ -26,13 +26,13 @@ typedef TarFsOptions<Stream> = {
 }
 
 typedef TarFsExtractOptions = {
-  > TarFsOptions<js.node.stream.Readable.IReadable>,
+  > TarFsOptions<js.node.stream.Writable.IWritable>,
   dmode:Int,
   fmode:Int,
 }
 
 typedef TarFsPackOptions = {
-  > TarFsOptions<js.node.stream.Writable.IWritable>,
+  > TarFsOptions<js.node.stream.Readable.IReadable>,
   entries:Array<String>
 }
 
