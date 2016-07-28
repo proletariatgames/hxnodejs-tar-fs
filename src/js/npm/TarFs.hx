@@ -27,8 +27,8 @@ typedef TarFsOptions<Stream> = {
 
 typedef TarFsExtractOptions = {
   > TarFsOptions<js.node.stream.Writable.IWritable>,
-  dmode:Int,
-  fmode:Int,
+  ?dmode:Int,
+  ?fmode:Int,
 }
 
 typedef TarFsPackOptions = {
